@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+<h2>GÕ TRẬM THÔI NHÉ !!!!</h2>
+<form name="f">
+    <textarea name="txt" cols="40" rows="10" onkeydown="typeTextarea();"></textarea>
+</form>
+</center>
+<script>
+    var a = new Array(), n = "";
+    a[1] = 'D';
+    a[2] = 'Ư';
+    a[3] = 'Ơ';
+    a[4] = 'N';
+    a[5] = 'G';
+    a[6] = ' ';
+    a[7] = 'L';
+    a[8] = 'À';
+    a[9] = ' ';
+    a[10] = 'M';
+    a[11] = 'Ộ';
+    a[12] = 'T';
+    a[13] = ' ';
+    a[14] = 'N';
+    a[15] = 'G';
+    a[16] = 'Ư';
+    a[17] = 'Ờ';
+    a[18] = 'I';
+    a[19] = ' ';
+    a[20] = 'Đ';
+    a[21] = 'Ệ';
+    a[22] = 'P';
+    a[23] = ' ';
+    a[24] = 'Z';
+    a[25] = 'A';
+    a[26] = 'I';
+    a[27] = 'I';
+    a[28] = 'I';
+    a[29] = ' ';
+    a[30] = '<';
+    a[31] = '3';
+
+    function typeTextarea() {
+        t = document.f.txt.value;
+        j = t.length;
+        if (j > 0) {
+            for (var i = 1; i <= j; i++) {
+                n = n + a[i];
+                if (i === 32) {
+                    document.f.txt.value = "";
+                    n = "";
+                }
+            }
+        }
+        document.f.txt.value = n;
+        n = "";
+        setTimeout("typeTextarea()", 1);
+        //return false;
+    }
+</script>
+</body>
+
+</html>
